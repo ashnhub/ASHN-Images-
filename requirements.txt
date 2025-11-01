@@ -1,5 +1,5 @@
 # Backend Python pour ASHN Images (API REST)
-# Optimisé pour Render avec Python 3.11
+# Compatible Python 3.13
 # Installation: pip install -r requirements.txt
 
 # Framework Web
@@ -15,35 +15,29 @@ SQLAlchemy==2.0.23
 # Authentification et sécurité
 bcrypt==4.1.2
 python-dotenv==1.0.0
-cryptography==42.0.0
+cryptography==43.0.3
 
-# Gestion des images (version compatible)
-Pillow==10.3.0
-cloudinary==1.40.0
+# Gestion des images - VERSION BINAIRE (pas de compilation)
+Pillow==11.0.0
 
 # Upload de fichiers
 werkzeug==3.0.1
 
 # API et validation
-marshmallow==3.20.1
-flask-marshmallow==1.2.0
-marshmallow-sqlalchemy==1.0.0
+marshmallow==3.23.1
+flask-marshmallow==1.2.1
+marshmallow-sqlalchemy==1.1.0
 
 # Utilitaires
-python-dateutil==2.8.2
-pytz==2024.1
-requests==2.31.0
+python-dateutil==2.9.0
+pytz==2024.2
+requests==2.32.3
 
 # Email
-Flask-Mail==0.9.1
+Flask-Mail==0.10.0
 
 # Rate limiting
-Flask-Limiter==3.5.0
+Flask-Limiter==3.8.0
 
 # Production server
-gunicorn==21.2.0
-
-# Tests (optionnel - commentez si non utilisé)
-# pytest==8.0.0
-# pytest-flask==1.3.0
-# faker==22.0.0
+gunicorn==23.0.0
