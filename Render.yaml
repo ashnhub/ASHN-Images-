@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: ashn-images
+    env: python
+    runtime: python-3.11.9
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ashn-db
+          property: connectionString
+    
+databases:
+  - name: ashn-db
+    databaseName: ashn_images
+    user: ashn_user
